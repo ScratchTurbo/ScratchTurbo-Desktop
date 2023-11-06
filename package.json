@@ -1,11 +1,11 @@
 {
-  "name": "turbowarp-desktop",
-  "description": "Scratch mod with a compiler, dark mode, a bunch of addons, and more.",
-  "version": "1.7.0",
+  "name": "snail-ide-desktop",
+  "description": "A PenguinMod modification",
+  "version": "2.1.8",
   "license": "GPL-3.0",
   "author": {
-    "email": "contact@turbowarp.org",
-    "name": "Thomas Weber"
+    "email": "nmsderp@gmail.com",
+    "name": "Nolan Simpson"
   },
   "scripts": {
     "dev": "npm run start",
@@ -28,7 +28,7 @@
     "postcss-import": "^14.0.0",
     "postcss-loader": "^4.2.0",
     "postcss-simple-vars": "^6.0.3",
-    "scratch-gui": "git+https://github.com/PenguinMod/penguinmod.github.io#desktop",
+    "scratch-gui": "git+https://github.com/snail-ide/snail-ide.github.io#desktop",
     "semver": "^7.3.4",
     "webpack": "~4.46.0",
     "write-file-atomic": "^5.0.0"
@@ -44,8 +44,8 @@
   },
   "build": {
     "extends": "file:node_modules/@turbowarp/electron-webpack/out/electron-builder.js",
-    "appId": "org.turbowarp.desktop",
-    "productName": "TurboWarp",
+    "appId": "org.snail-ide.desktop",
+    "productName": "Snail IDE",
     "win": {
       "artifactName": "${productName} Portable ${version} ${arch}.${ext}",
       "icon": "build/icon.ico",
@@ -62,9 +62,9 @@
     },
     "appx": {
       "artifactName": "${productName} MS Store ${version} ${arch}.${ext}",
-      "applicationId": "TurboWarp",
-      "displayName": "TurboWarp",
-      "identityName": "45747ThomasWeber.TurboWarpDesktop",
+      "applicationId": "Snail IDE",
+      "displayName": "Snail IDE",
+      "identityName": "45747TNolanSimpson.SnailIDEDesktop",
       "publisher": "CN=18FA7D4F-01BF-49F2-BF56-782DCEA49C69",
       "publisherDisplayName": "Thomas Weber",
       "backgroundColor": "#4c97ff",
@@ -160,13 +160,31 @@
         "name": "Scratch 1 Project",
         "role": "Editor",
         "mimeType": "application/x.scratch.sb"
+      },
+      {
+        "ext": "pm",
+        "name": "PenguinMod Legacy Project",
+        "role": "Editor",
+        "mimeType": "application/x.penguinmod.pm"
+      },
+      {
+        "ext": "pmp",
+        "name": "PenguinMod Project",
+        "role": "Editor",
+        "mimeType": "application/x.penguinmod.pmp"
+      },
+      {
+        "ext": "snail",
+        "name": "Snail IDE Project",
+        "role": "Editor",
+        "mimeType": "application/x.snailide.snail"
       }
     ],
     "publish": [
       {
         "provider": "github",
-        "repo": "desktop",
-        "owner": "TurboWarp"
+        "repo": "Snail-IDE-Desktop",
+        "owner": "Snail-IDE"
       }
     ]
   },
