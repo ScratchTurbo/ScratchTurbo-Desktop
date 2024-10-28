@@ -19,7 +19,7 @@ jobs:
         node-version: 14.x
         cache: npm
     - name: Install Dependencies
-      run: npm ci
+      run: npm ci --force --legacy-peer-deps
     - name: Download Library Files
       run: npm run fetch
     - name: Compile and package
