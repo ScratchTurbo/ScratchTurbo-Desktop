@@ -33,7 +33,6 @@ jobs:
         TW_ENABLE_UPDATE_CHECKER: "1"
 
     - name: Package Windows
-      if: runner.os == 'Windows'
       run: |
         npx electron-builder --windows nsis --x64 --publish always
         npx electron-builder --windows nsis --ia32 --publish always
